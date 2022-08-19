@@ -10,7 +10,7 @@ M.config = function()
   vim.g.copilot_tab_fallback = ""
   local cmp = require "cmp"
 
-  lvim.builtin.cmp.mapping["<C-j>"] = function(fallback)
+  lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
     cmp.mapping.abort()
     local copilot_keys = vim.fn["copilot#Accept"]()
     if copilot_keys ~= "" then
